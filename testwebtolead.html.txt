@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulario de Contacto</h2>
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DcY000002QdxR" method="POST">
+
+        <input type="hidden" name="oid" value="00DcY000002QdxR">
+        <input type="hidden" name="retURL" value="http://salesforce.com">
+        <input type=hidden name="recordTypeId" id="recordType" value="012TR00000090SEYAY">
+
+        <label for="first_name">Nombre</label>
+        <input id="first_name" maxlength="40" name="first_name" type="text" required>
+
+        <label for="last_name">Apellidos</label>
+        <input id="last_name" maxlength="80" name="last_name" type="text" required>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" maxlength="80" name="email" type="email" required>
+
+        <label for="company">Compañía</label>
+        <input id="company" maxlength="40" name="company" type="text">
+
+        <label for="city">Ciudad</label>
+        <input id="city" maxlength="40" name="city" type="text">
+
+        <label for="mobile">Móvil</label>
+        <input id="mobile" maxlength="40" name="mobile" type="text">
+
+        <button type="submit" class="submit-btn">Enviar</button>
+        
+
+    </form>
+</div>
+
+</body>
+</html>
